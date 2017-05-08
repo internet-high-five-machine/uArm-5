@@ -25,7 +25,11 @@ def main():
 
 def high5(arm):
     a0 = home_arm(arm)
+    # Up 
     a1 = arm.set_position(150, 0, 215, speed=speed, wait=True)
+    # Backswing ...
+    a2 = arm.set_position(150, 70, 215, speed=speed, wait=True)
+    # In
     a2 = arm.set_position(150, -70, 215, speed=speed, wait=True)
 
     time.sleep(0.3)
